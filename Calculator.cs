@@ -33,13 +33,13 @@ namespace practicalwork
                 Console.WriteLine("Вы ввели неверное значение, число будет равно 0");
             }
 
-            try
+            if (secondNumber == 0)
+            {
+                throw new ArgumentException("На ноль делить НЕЛЬЗЯ");
+            }
+            else
             {
                 result = firstNumber / secondNumber;
-            }
-            catch
-            {
-                Console.WriteLine("Делить на ноль НЕЛЬЗЯ");
             }
 
             return result;
